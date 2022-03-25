@@ -3,7 +3,7 @@ import UseForm from './UseForm';
 import {Link} from 'react-router-dom'
 //import Otp from './Otp';
 import validate from './validateInfo'
-const Login_Signup=()=>{
+const LoginSignup=()=>{
 const{ handleChange,values,handleSubmit,errors}=UseForm(validate);
 
 
@@ -45,4 +45,4 @@ const{ handleChange,values,handleSubmit,errors}=UseForm(validate);
     </div>
         )
     }
-export default Login_Signup
+export default LoginSignup

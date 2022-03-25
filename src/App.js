@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 //import More from './components/More'
 import Otp from './components/Otp'
 import Email from './components/Email'
-import Login_Signup from './components/Login_Signup'
+import LoginSignup from './components/LoginSignup'
 import './App.css'
 //import useForm from './component/useForm
 
@@ -18,7 +18,7 @@ class App extends Component{
     <Navbar />
     <Routes>
     {/* <Route exact path="/" element={<More />}/> */}
-    <Route path="/login_signup" element={<Login_Signup />}/>
+    <Route path="/login_signup" element={<LoginSignup />}/>
     <Route path="/email" element={<Email />}/>
     <Route path="/otp" element={<Otp />}></Route>
     </Routes>
