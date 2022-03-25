@@ -1,6 +1,6 @@
 import React from 'react';
 import UseForm from './UseForm'; 
-import {Link,NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 //import Otp from './Otp';
 import validate from './validateInfo'
 const Login_Signup=()=>{

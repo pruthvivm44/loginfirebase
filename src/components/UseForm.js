@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState} from 'react';
 const UseForm= validate =>{
     const [ values,setValues ]=useState({
         //these are the id's of Login_Signup

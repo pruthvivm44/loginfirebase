@@ -1,11 +1,11 @@
 import React,{ Component } from 'react'
 import Navbar from './components/Navbar'
-import More from './components/More'
+//import More from './components/More'
 import Otp from './components/Otp'
 import Email from './components/Email'
 import Login_Signup from './components/Login_Signup'
 import './App.css'
-//import useForm from './component/useForm'
+//import useForm from './component/useForm
 
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 
