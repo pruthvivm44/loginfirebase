@@ -18,7 +18,7 @@ class App extends Component{
     <Navbar />
     <Routes>
     {/* <Route exact path="/" element={<More />}/> */}
-    <Route path="/login_signup" element={<LoginSignup />}/>
+    <Route path="/loginsignup" element={<LoginSignup />}/>
     <Route path="/email" element={<Email />}/>
     <Route path="/otp" element={<Otp />}></Route>
     </Routes>
