@@ -1,4 +1,5 @@
 import React from 'react'
+import labels from '../config/labels';
 //import { useState } from 'react'
 import UseForm1 from './UseForm1';
 import validate1 from './validateInfo1'
@@ -17,7 +18,7 @@ const Otp=()=> {
              <button className="green darken-4">Send OTP</button>
          </div>
          <p></p>
-         <h6 className="center">-------------------------  OR  -------------------------</h6>
+         <h6 className="center">{labels.OTP.DIVIDER_OR}</h6>
          <p></p>
          <div className="center">
          <button className="green darken-4"><a href="/Email">Login with Email</a></button>

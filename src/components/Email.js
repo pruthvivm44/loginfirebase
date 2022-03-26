@@ -1,6 +1,7 @@
 import React from 'react'
 //import { useState } from 'react';
 import {Link } from 'react-router-dom'
+import labels from '../config/labels'
 import UseForm2 from './UseForm2'
 import validate2 from './validateInfo2'
 
@@ -24,13 +25,13 @@ const Email=()=> {
                     </div>
                     <p></p>
         
-        <h6 className="center">-------------------------  OR  -------------------------</h6>
+        <h6 className="center">{labels.EMAIL.DIVIDER_OR}</h6>
         <p></p>
         <div className="center">
         <button className="green darken-4"><a href="/Otp">Login with OTP</a></button>
         </div>
         <div className="center">
-        <p>Don't have an account ? <a href="/"> Register</a></p>
+        <p>{labels.EMAIL.DONT_HAVE_ACCNT} <a href="/"> Register</a></p>
         </div>
         <p></p>
         <div>
