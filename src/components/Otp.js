@@ -1,11 +1,17 @@
 import React from 'react'
 import labels from '../config/labels';
-//import { useState } from 'react'
+import { useState } from 'react'
 import UseForm1 from './UseForm1';
 import validate1 from './validateInfo1'
+import Email from './Email';
 
 const Otp=()=> {
     const{ handleChange,values,handleSubmit,errors}=UseForm1(validate1);
+
+    const [logOtp,setLoginOtp]=useState(false);
+    if(logOtp){
+      return <Email/>
+    }
     
   return (
     <div className="container white">
@@ -21,7 +27,7 @@ const Otp=()=> {
          <h6 className="center">{labels.OTP.DIVIDER_OR}</h6>
          <p></p>
          <div className="center">
-         <button className="green darken-4"><a href="/Email">Login with Email</a></button>
+         <button onClick={()=>setLoginOtp(true)} className="green darken-4">Login with Email</button>
      </div>
      </form>
     </div>

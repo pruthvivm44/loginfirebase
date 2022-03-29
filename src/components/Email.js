@@ -6,8 +6,14 @@ import UseForm2 from './UseForm2'
 import validate2 from './validateInfo2'
 
 
-const Email=()=> {
+const Email=(props)=> {
   const{handleChange,values,handleSubmit,errors}=UseForm2(validate2);
+
+  const {setLoginWithOtp} = props;
+    console.log(
+        'setLoginWithOtp',props
+    )
+    
     
   return (
     <div className="container white">
@@ -28,7 +34,7 @@ const Email=()=> {
         <h6 className="center">{labels.EMAIL.DIVIDER_OR}</h6>
         <p></p>
         <div className="center">
-        <button className="green darken-4"><a href="/Otp">Login with OTP</a></button>
+        <button onClick={()=>setLoginWithOtp()} className="green darken-4">Login with OTP</button>
         </div>
         <div className="center">
         <p>{labels.EMAIL.DONT_HAVE_ACCNT} <a href="/"> Register</a></p>

@@ -4,10 +4,17 @@ import {Link} from 'react-router-dom'
 //import Otp from './Otp';
 import validate from './validateInfo'
 import labels from '../config/labels';
-const LoginSignup=()=>{
+const LoginSignup=(props)=>{
 const{ handleChange,values,handleSubmit,errors}=UseForm(validate);
 
-
+const {setLoginWithOtp} = props;
+    console.log(
+        'setLoginWithOtp',props
+    )
+    const {setDontHavacnt} = props;
+    console.log(
+        'setDontHavacnt',props
+    )
 
         return(
             <div className="container white">
@@ -22,7 +29,7 @@ const{ handleChange,values,handleSubmit,errors}=UseForm(validate);
                     
                     <input 
                     type="password" name="password" placeholder="Password" id="password" value={values.password} onChange={handleChange} />
-                    <p className="message center">{labels.LOGINSIGNUP.DONT_HAVE_ACCNT} <a href="/Email">Create now</a></p>
+                    <p className="message center">{labels.LOGINSIGNUP.DONT_HAVE_ACCNT}<button onClick={()=>setDontHavacnt()} className="green right" >create now</button></p>
                     {errors.password && <p>{errors.password}</p> }
                      
                      {/* <div>
@@ -31,8 +38,7 @@ const{ handleChange,values,handleSubmit,errors}=UseForm(validate);
                      </div> */}
                      
                      <div>
-                        <input
-                        type="checkbox" /> <span>Login via OTP</span>
+                     <button  onClick={()=>setLoginWithOtp()}   className="blue darken-3">Login via Otp</button>
                     </div>
                            
                             <button className="green darken-4 ">Submit</button>
