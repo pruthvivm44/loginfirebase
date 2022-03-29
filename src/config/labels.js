@@ -5,7 +5,7 @@ const labels={
     },
     EMAIL:{
         DIVIDER_OR:'-------------------------  OR  -------------------------',
-        DONT_HAVE_ACCNT :'Dont have an account ?'
+        DONT_HAVE_ACCNT :'Dont have account ?'
     },
     OTP:{
         DIVIDER_OR  :'-------------------------  OR  -------------------------'
