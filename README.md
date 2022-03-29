@@ -1,2 +1,2 @@
 # WCS_FRONTEND
-https://github.com/balu19999/WCS_FRONTEND/workflows/CI/CD/badge.svg
+<a href="https://github.com/balu19999/WCS_FRONTEND/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/balu19999/WCS_FRONTEND"></a>
