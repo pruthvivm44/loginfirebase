@@ -2,7 +2,7 @@ name: CI/CD
 
 on:
   push:
-    branches: [ todo ]
+    branches: [ login ]
   pull_request:
     branches: [ todo2 ]
 
