@@ -1,5 +1,4 @@
 import React from 'react'
-//import { useState } from 'react';
 import {Link } from 'react-router-dom'
 import labels from '../config/labels'
 import UseForm2 from './UseForm2'
@@ -10,9 +9,7 @@ const Email=(props)=> {
   const{handleChange,values,handleSubmit,errors}=UseForm2(validate2);
 
   const {setLoginWithOtp} = props;
-    console.log(
-        'setLoginWithOtp',props
-    )
+    
     
     
   return (

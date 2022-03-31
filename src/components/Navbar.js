@@ -1,6 +1,5 @@
 import React from 'react'
 import WCSimage from '../WCSimage.png';
-//import { Routes, Route } from "react-router-dom"
 
 const Navbar=()=>{
    

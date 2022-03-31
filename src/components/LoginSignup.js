@@ -1,20 +1,15 @@
 import React from 'react';
 import UseForm from './UseForm'; 
 import {Link} from 'react-router-dom'
-//import Otp from './Otp';
 import validate from './validateInfo'
 import labels from '../config/labels';
 const LoginSignup=(props)=>{
 const{ handleChange,values,handleSubmit,errors}=UseForm(validate);
 
 const {setLoginWithOtp} = props;
-    console.log(
-        'setLoginWithOtp',props
-    )
+   
     const {setDontHavacnt} = props;
-    console.log(
-        'setDontHavacnt',props
-    )
+    
 
         return(
             <div className="container white">
@@ -32,10 +27,7 @@ const {setLoginWithOtp} = props;
                     <p className="message center">{labels.LOGINSIGNUP.DONT_HAVE_ACCNT}<button onClick={()=>setDontHavacnt()} className="green right" >create now</button></p>
                     {errors.password && <p>{errors.password}</p> }
                      
-                     {/* <div>
-                        <input 
-                        type="radio center" value="" name="show password" /> Show password
-                     </div> */}
+                   
                      
                      <div>
                      <button  onClick={()=>setLoginWithOtp()}   className="blue darken-3">Login via Otp</button>

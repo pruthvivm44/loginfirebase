@@ -1,6 +1,5 @@
 import React,{useState} from "react";
 import Email from "../../components/Email";
-// import Log1 from "../../components/Log1";
  
 import LoginSignup from "../../components/LoginSignup";
 import Otp from "../../components/Otp";
@@ -9,7 +8,7 @@ import Otp from "../../components/Otp";
  const Login=(props)=>{
   
   console.log('props',props)
- const [loginWithOtp,setLoginWithOtp]=useState(false);
+ const [LoginWithOtp,setLoginWithOtp]=useState(false);
  const [dontHavAcnt,setDontHavacnt]=useState(false);
  
  
@@ -17,8 +16,8 @@ import Otp from "../../components/Otp";
 //otp
 const loginWithOTP = () =>
 setLoginWithOtp( prevState =>!prevState)
-console.log('loginWithOtp',loginWithOtp);
-if(loginWithOtp){
+console.log('loginWithOtp',LoginWithOtp);
+if(LoginWithOtp){
     return <Otp/>
 }
 
