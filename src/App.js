@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 import Navbar from './components/Navbar'
 import './App.css'
-import Login from './containers/LoginContainers/Login'
+import LoginContainer from './container/LoginContainer'
 
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 
@@ -13,7 +13,7 @@ class App extends Component{
     <div className="App">
     <Navbar />
     <Routes>
-    <Route path="/Login" element={<Login />}/>
+    <Route path="/LoginContainer" element={<LoginContainer />}/>
    
     </Routes>
     </div>

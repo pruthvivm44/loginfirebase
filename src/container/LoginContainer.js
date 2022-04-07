@@ -1,14 +1,13 @@
 import React,{useState} from "react";
-import Email from "../../components/Email";
- 
-import LoginSignup from "../../components/LoginSignup";
-import Otp from "../../components/Otp";
+import LoginWithEmail from "../components/LoginWithEmail";
+ import LoginSignup from "../components/LoginSignup";
+import LoginWithOTP from "../components/LoginWithOTP";
 
 
  const Login=(props)=>{
   
   console.log('props',props)
- const [LoginWithOtp,setLoginWithOtp]=useState(false);
+ const [loginWithOtp,setLoginWithOtp]=useState(false);
  const [dontHavAcnt,setDontHavacnt]=useState(false);
  
  
@@ -16,9 +15,9 @@ import Otp from "../../components/Otp";
 //otp
 const loginWithOTP = () =>
 setLoginWithOtp( prevState =>!prevState)
-console.log('loginWithOtp',LoginWithOtp);
-if(LoginWithOtp){
-    return <Otp/>
+console.log('loginWithOtp',loginWithOtp);
+if(loginWithOtp){
+    return <LoginWithOTP setLoginWithOtp={loginWithOtp}/>
 }
 
 //email
@@ -28,7 +27,7 @@ console.log('dontHavAcnt',dontHavAcnt)
 
     if(dontHavAcnt)
     {
-        return <Email setLoginWithOtp={loginWithOTP}/>
+        return <LoginWithEmail setDontHavAcnt={dontHavacnt}/>
         
     }
    return <LoginSignup  setLoginWithOtp={loginWithOTP}  setDontHavacnt={dontHavacnt} />   

@@ -2,19 +2,23 @@ import React from 'react'
 import {Link } from 'react-router-dom'
 import labels from '../config/labels'
 import UseForm2 from './UseForm2'
-import validate2 from './validateInfo2'
+import validate2 from '../validations/ValidateEmail'
+import LoggingWithOtp from './LoginWithOTP'
 
 
-const Email=(props)=> {
+const LoginWithEmail=(props)=> {
   const{handleChange,values,handleSubmit,errors}=UseForm2(validate2);
 
-  const {setLoginWithOtp} = props;
-    
-    
-    
-  return (
-    <div className="container white">
-     <form className="text-box" onSubmit={handleSubmit} >
+  const {loginWithOtp,setLoginWithOtp} = props;
+    console.log(
+    'setLoginWithOtp',props
+     )
+     if(loginWithOtp){
+  return <LoggingWithOtp />
+  }
+    return (
+    <div className="container white" >
+     <form className="text-box">
          <h5 className="Left">Login</h5>
          <input type="text-box" name="emailid" placeholder="Email Id" id="emailid" value={values.emailid} onChange={handleChange}/>
          {errors.emailid && <p>{errors.emailid}</p>}
@@ -24,7 +28,7 @@ const Email=(props)=> {
             {errors.password1 && <p>{errors.password1}</p>}
             <p></p>
                     <div>
-                    <button className="green darken-4">Submit</button>
+                    <button onClick={handleSubmit} className="green darken-4">Submit</button>
                     </div>
                     <p></p>
         
@@ -34,12 +38,12 @@ const Email=(props)=> {
         <button onClick={()=>setLoginWithOtp()} className="green darken-4">Login with OTP</button>
         </div>
         <div className="center">
-        <p>{labels.EMAIL.DONT_HAVE_ACCNT} <a href="/"> Register</a></p>
+        <p>{labels.EMAIL.DONT_HAVE_ACCNT} <a href="/">{labels.REGISTER.CLICK_HERE_TO_REGISTER}</a></p>
         </div>
         <p></p>
         <div>
                     <Link to='/'>
-                        <button className="blue darken-4 right">Close</button>
+                        <button className="blue darken-4 right">{labels.CLOSE.CLICK_HERE_TO_CLOSE}</button>
                         </Link>
                     </div>
         </div>
@@ -48,4 +52,4 @@ const Email=(props)=> {
   )
 }
 
-export default Email
+export default LoginWithEmail

@@ -2,15 +2,15 @@ import React from 'react'
 import labels from '../config/labels';
 import { useState } from 'react'
 import UseForm1 from './UseForm1';
-import validate1 from './validateInfo1'
-import Email from './Email';
+import validate1 from '../validations/ValidateOtp'
+import LoginWithEmail from './LoginWithEmail';
 
-const Otp=()=> {
+const LoginWithOTP=()=> {
     const{ handleChange,values,handleSubmit,errors}=UseForm1(validate1);
 
     const [logOtp,setLoginOtp]=useState(false);
     if(logOtp){
-      return <Email/>
+      return <LoginWithEmail/>
     }
     
   return (
@@ -34,4 +34,4 @@ const Otp=()=> {
   )
 }
 
-export default Otp
+export default LoginWithOTP

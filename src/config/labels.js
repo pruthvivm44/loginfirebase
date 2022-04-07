@@ -8,7 +8,13 @@ const labels={
         DONT_HAVE_ACCNT :'Dont have account ?'
     },
     OTP:{
-        DIVIDER_OR  :'-------------------------  OR  -------------------------'
+        DIVIDER_OR  :'-------------------------  OR  -------------------------',
+    },
+    REGISTER:{
+        CLICK_HERE_TO_REGISTER:"Register"
+    },
+    CLOSE:{
+        CLICK_HERE_TO_CLOSE:"Close"
     }
 
 }

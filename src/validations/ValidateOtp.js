@@ -1,4 +1,4 @@
-export default function validateInfo1(values){
+export default function ValidateOtp(values){
     let errors ={}
     
     if(!values.phonenumber.trim()){
@@ -12,7 +12,7 @@ export default function validateInfo1(values){
     if(values.phonenumber.length > 10){
         errors.phonenumber=<p style={{color:"red"}}>PhoneNumbers not more than 10 Numbers</p>
     }
-
+    
     
     return errors;
 }

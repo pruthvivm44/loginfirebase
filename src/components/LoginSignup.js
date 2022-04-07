@@ -1,15 +1,19 @@
 import React from 'react';
 import UseForm from './UseForm'; 
 import {Link} from 'react-router-dom'
-import validate from './validateInfo'
+import validate from '../validations/ValidateLoginSignup'
 import labels from '../config/labels';
 const LoginSignup=(props)=>{
 const{ handleChange,values,handleSubmit,errors}=UseForm(validate);
 
 const {setLoginWithOtp} = props;
-   
+    console.log(
+        'setLoginWithOtp',props
+    )
     const {setDontHavacnt} = props;
-    
+    console.log(
+        'setDontHavAcnt',props
+    )
 
         return(
             <div className="container white">
