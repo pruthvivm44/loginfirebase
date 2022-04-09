@@ -1,17 +1,15 @@
+//validating Email and Password while user login in LoginContainer
 import { useState} from 'react';
 const UseForm= validate =>{
     const [ values,setValues ]=useState({
-        //these are the id's of Login_Signup
         username:'',
         password:''
     })
      const [errors,setErrors]=useState({});
-
-    const handleChange= e =>{
+     const handleChange= e =>{
         const{ name,value }=e.target;
         setValues({
             ...values,
-            //it target the names in Login_Signup
             [name]:value
         });
     };

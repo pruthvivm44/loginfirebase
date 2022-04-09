@@ -1,3 +1,4 @@
+//validating otp while user logging with Phone number
 import { useState } from 'react'
 const UseForm1=validate1=>{
     const[values,setValues]=useState({
@@ -9,7 +10,6 @@ const UseForm1=validate1=>{
         const{ name,value }=e.target;
         setValues({
             ...values,
-            //it target the names in Login_Signup
             [name]:value
         });
     };

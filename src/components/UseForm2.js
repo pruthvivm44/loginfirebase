@@ -1,9 +1,9 @@
+//validating Email and Password while user LoginWithEmail
 import {useState} from 'react'
 const UseForm2=validate2=>{
 const[values,setValues]=useState({
     emailid:'',
     password1:''
-
 })
 const[errors,setErrors]=useState({});
 

@@ -2,16 +2,15 @@ import React from 'react'
 import labels from '../config/labels';
 import { useState } from 'react'
 import UseForm1 from './UseForm1';
-import validate1 from '../validations/ValidateOtp'
+import validate1 from './ValidateOtp'
 import LoginWithEmail from './LoginWithEmail';
 
-const LoginWithOTP=()=> {
+const LoginWithOTP=(props)=> {
     const{ handleChange,values,handleSubmit,errors}=UseForm1(validate1);
-
     const [logOtp,setLoginOtp]=useState(false);
-    if(logOtp){
-      return <LoginWithEmail/>
-    }
+      if(logOtp){
+        return <LoginWithEmail/>
+      }
     
   return (
     <div className="container white">
@@ -21,13 +20,13 @@ const LoginWithOTP=()=> {
          {errors.phonenumber && <p>{errors.phonenumber}</p>}
          <p></p>
          <div >
-             <button className="green darken-4">Send OTP</button>
+             <button className="green darken-4">{labels.LOGINWITHOTP.SEND_OTP}</button>
          </div>
          <p></p>
-         <h6 className="center">{labels.OTP.DIVIDER_OR}</h6>
+         <h6 className="center">{labels.LOGINWITHOTP.DIVIDER_OR}</h6>
          <p></p>
          <div className="center">
-         <button onClick={()=>setLoginOtp(true)} className="green darken-4">Login with Email</button>
+         <button onClick={()=>setLoginOtp(true)} className="green darken-4">{labels.LOGINWITHOTP.LOGIN_THROUGH_EMAIL}</button>
      </div>
      </form>
     </div>

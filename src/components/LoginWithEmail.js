@@ -2,20 +2,16 @@ import React from 'react'
 import {Link } from 'react-router-dom'
 import labels from '../config/labels'
 import UseForm2 from './UseForm2'
-import validate2 from '../validations/ValidateEmail'
-import LoggingWithOtp from './LoginWithOTP'
-
+import validate2 from './ValidateEmail'
+import LoginWithOTP from './LoginWithOTP'
 
 const LoginWithEmail=(props)=> {
   const{handleChange,values,handleSubmit,errors}=UseForm2(validate2);
-
   const {loginWithOtp,setLoginWithOtp} = props;
-    console.log(
-    'setLoginWithOtp',props
-     )
-     if(loginWithOtp){
-  return <LoggingWithOtp />
-  }
+     
+    if(loginWithOtp){
+      return <LoginWithOTP />
+    }
     return (
     <div className="container white" >
      <form className="text-box">
@@ -28,22 +24,22 @@ const LoginWithEmail=(props)=> {
             {errors.password1 && <p>{errors.password1}</p>}
             <p></p>
                     <div>
-                    <button onClick={handleSubmit} className="green darken-4">Submit</button>
+                    <button onClick={handleSubmit} className="green darken-4">{labels.LOGINWITHEMAIL.AFTER_FILLED_ALL_DETAILS}</button>
                     </div>
                     <p></p>
         
-        <h6 className="center">{labels.EMAIL.DIVIDER_OR}</h6>
+        <h6 className="center">{labels.LOGINWITHEMAIL.DIVIDER_OR}</h6>
         <p></p>
         <div className="center">
-        <button onClick={()=>setLoginWithOtp()} className="green darken-4">Login with OTP</button>
+        <button onClick={()=>setLoginWithOtp()} className="green darken-4">{labels.LOGINWITHEMAIL.LOGIN_THROUGH_OTP}</button>
         </div>
         <div className="center">
-        <p>{labels.EMAIL.DONT_HAVE_ACCNT} <a href="/">{labels.REGISTER.CLICK_HERE_TO_REGISTER}</a></p>
+        <p>{labels.LOGINWITHEMAIL.DONT_HAVE_ACCNT} <a href="/">{labels.LOGINWITHEMAIL.CLICK_HERE_TO_REGISTER}</a></p>
         </div>
         <p></p>
         <div>
                     <Link to='/'>
-                        <button className="blue darken-4 right">{labels.CLOSE.CLICK_HERE_TO_CLOSE}</button>
+                        <button className="blue darken-4 right">{labels.LOGINWITHEMAIL.CLICK_HERE_TO_CLOSE}</button>
                         </Link>
                     </div>
         </div>

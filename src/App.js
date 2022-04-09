@@ -2,9 +2,7 @@ import React,{ Component } from 'react'
 import Navbar from './components/Navbar'
 import './App.css'
 import LoginContainer from './container/LoginContainer'
-
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
-
 
 class App extends Component{
   render(){
@@ -14,7 +12,6 @@ class App extends Component{
     <Navbar />
     <Routes>
     <Route path="/LoginContainer" element={<LoginContainer />}/>
-   
     </Routes>
     </div>
     </BrowserRouter>
