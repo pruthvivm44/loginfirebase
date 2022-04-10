@@ -21,7 +21,7 @@ return(
                 <input 
                 type="password" name="password" placeholder="Password" id="password" value={values.password} onChange={handleChange}/>
                 {errors.password && <p>{errors.password}</p>}
-                <p className="message center" style={{color:'black'}}>{labels.LOGINSIGNUP.DONT_HAVE_ACCNT} <a href=''>{labels.LOGINSIGNUP.CREATE_NEW_ACCOUNT}</a></p>
+                <p className="message center" style={{color:'black'}}>{labels.LOGINSIGNUP.DONT_HAVE_ACCNT} <a href='/LoginContainer'>{labels.LOGINSIGNUP.CREATE_NEW_ACCOUNT}</a></p>
                 
                 <div>
                  <button  onClick={()=>setLoginWithOtp(true)}   className="blue darken-3">{labels.LOGINSIGNUP.LOGIN_THROUGH_OTP}</button>
