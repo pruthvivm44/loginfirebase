@@ -1,4 +1,4 @@
-//validating Email and Password while user login in LoginContainer
+//validating EmailId and Password while user login with Email
 import { useState} from 'react';
 const UseForm= validate =>{
     const [ values,setValues ]=useState({
