@@ -3,13 +3,13 @@ import LoginWithOTP from "../components/LoginWithOTP";
 import LoginSignup from '../components/LoginSignup'
 
  const Login=(props)=>{
-    const [loginWithOtp,setLoginWithOtp]=useState(false);
+    const [LoginWithOtp,setLoginWithOtp]=useState(false);
 
-    const loginWithOTP = () =>
+    const LoginWithOtP = () =>
     setLoginWithOtp( prevState =>!prevState)
-    if(loginWithOtp){
-        return <LoginWithOTP setLoginWithOtp={loginWithOTP}/>
+    if(LoginWithOtp){
+        return <LoginWithOTP setLoginWithOtp={LoginWithOtP}/>
     }   
-        return <LoginSignup setLoginWithOtp={loginWithOTP}/>
+        return <LoginSignup setLoginWithOtp={LoginWithOtP}/>
   }
 export default Login
