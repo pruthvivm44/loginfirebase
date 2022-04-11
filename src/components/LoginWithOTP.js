@@ -1,12 +1,12 @@
 import React from 'react'
 import labels from '../config/labels';
 import { useState } from 'react'
-import UseForm1 from './UseForm1';
+import UserOtpValues from './UserOtpValues';
 import validate1 from './ValidateOtp'
 import LoginContainer from '../container/LoginContainer'
 
 const LoginWithOTP=(props)=> {
-    const{ handleChange,values,handleSubmit,errors}=UseForm1(validate1);
+    const{ handleChange,values,handleSubmit,errors}=UserOtpValues(validate1);
     const [logOtp,setLoginOtp]=useState(false);
       if(logOtp){
         return <LoginContainer/>

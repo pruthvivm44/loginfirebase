@@ -1,4 +1,4 @@
-//validating otp while user logged with Phone number
+//validating otp while user logged with Phone number//UserOtpValues
 import { useState } from 'react'
 const UseForm1=validate1=>{
     const[values,setValues]=useState({

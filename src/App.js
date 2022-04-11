@@ -11,7 +11,7 @@ class App extends Component{
     <div className="App">
     <Navbar />
     <Routes>
-    <Route path="/LoginContainer" element={<LoginContainer />}/>
+    <Route path="/login" element={<LoginContainer />}/>
     </Routes>
     </div>
     </BrowserRouter>
