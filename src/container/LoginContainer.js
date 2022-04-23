@@ -12,4 +12,4 @@ import LoginSignup from '../components/LoginSignup'
     }   
         return <LoginSignup setLoginWithOtp={LoginWithOtP}/>
   }
-export default Login
+export default Login 
